@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<title>[HNOI2004]宠物收养所 - 题目 - 黑暗爆炸OJ</title>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151218110-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-151218110-1');
+		</script>
+		
+		<script type="text/javascript">uojHome = 'https://darkbzoj.tk'</script>
+
+		<!-- Bootstrap core CSS -->
+		<link type="text/css" rel="stylesheet" href="https://darkbzoj.tk/css/bootstrap.min.css?v=2015.5.31" />		<!-- Bootstrap theme -->
+		<link type="text/css" rel="stylesheet" href="https://darkbzoj.tk/css/bootstrap-theme.min.css?v=2015.5.31" />
+		<!-- Custom styles for this template -->
+		<link type="text/css" rel="stylesheet" href="https://darkbzoj.tk/css/uoj-theme.css?v=2.33" />		
+		<!-- jQuery (necessary for Bootstrap\'s JavaScript plugins) -->
+		<script src="https://darkbzoj.tk/js/jquery.min.js"></script>		
+		<!-- jQuery autosize -->
+		<script src="https://darkbzoj.tk/js/jquery.autosize.min.js"></script>		<script type="text/javascript">
+			$(document).ready(function() {
+				$('textarea').autosize();
+			});
+		</script>
+		
+		<!-- jQuery cookie -->
+		<script src="https://darkbzoj.tk/js/jquery.cookie.min.js"></script>		
+		<!-- jQuery modal -->
+		<script src="https://darkbzoj.tk/js/jquery.modal.js"></script>		
+		<!-- jQuery tag canvas -->
+				
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="https://darkbzoj.tk/js/bootstrap.min.js?v=2015.5.31"></script>		
+		<!-- Color converter -->
+		<script src="https://darkbzoj.tk/js/color-converter.min.js"></script>		
+		<!-- uoj -->
+		<script src="https://darkbzoj.tk/js/uoj.js?v=2016.8.15"></script>		
+		<!-- LAB -->
+		<script src="https://darkbzoj.tk/js/LAB.min.js"></script>
+		<!-- UOJ ico -->
+		<link rel="shortcut icon" href="https://darkbzoj.tk/pictures/UOJ.ico" />
+		
+				
+				
+				
+				
+				
+				<!-- MathJax -->
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({
+				showProcessingMessages: false,
+				tex2jax: {
+					inlineMath: [["$", "$"], ["\\\\(", "\\\\)"]],
+					processEscapes:true
+				},
+				menuSettings: {
+					zoom: "Hover"
+    			}
+			});
+		</script>
+		<script src="//cdn.bootcss.com/mathjax/2.6.0/MathJax.js?config=TeX-AMS_HTML"></script>
+				
+				<!-- jquery form -->
+		<script src="https://darkbzoj.tk/js/jquery.form.min.js"></script>				
+		
+				
+				
+				
+				
+				<!-- shjs -->
+		<link type="text/css" rel="stylesheet" href="https://darkbzoj.tk/css/sh_typical.min.css" />		<script src="https://darkbzoj.tk/js/sh_main.min.js"></script>		<script type="text/javascript">$(document).ready(function(){sh_highlightDocument()})</script>
+				
+		
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		
+		<script type="text/javascript">
+		before_window_unload_message = null;
+		$(window).on('beforeunload', function() {
+			if (before_window_unload_message !== null) {
+			    return before_window_unload_message;
+			}
+		});
+		</script>
+		
+			</head>
+	<body role="document">
+		<div class="container theme-showcase" role="main">
+						<div>
+				<ul class="nav nav-pills pull-right" role="tablist">
+									<li role="presentation"><a href="https://darkbzoj.tk/login">登录</a></li>
+					<li role="presentation"><a href="https://darkbzoj.tk/register">注册</a></li>
+								</ul>
+				<h1 class="hidden-xs"><a href="https://darkbzoj.tk"><img src="https://darkbzoj.tk/pictures/UOJ_small.png" alt="UOJ Logo" class="img-rounded" style="width:39px; height:39px;" /></a> 黑暗爆炸OJ</h1>
+				<h1 class="visible-xs">DARKBZOJ</h1>
+			</div>
+			
+			<div class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="https://darkbzoj.tk">UOJ</a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="/contests">比赛</a></li>
+				<li><a href="/problems">题库</a></li>
+				<li><a href="/submissions">提交记录</a></li>
+				<li><a href="/hacks">Hack!</a></li>
+				<li><a href="/blogs">博客</a></li>
+				<li><a href="/faq">帮助</a></li>
+			</ul>
+		</div><!--/.nav-collapse -->
+	</div>
+</div>
+						
+			<div class="uoj-content">
+<div class="pull-right">
+	<div class="uoj-click-zan-block" data-id="1208" data-type="P" data-val="0" data-cnt="1"></div></div>
+
+<h1 class="page-header text-center">#1208. [HNOI2004]宠物收养所</h1>
+<a role="button" class="btn btn-info pull-right" href="/problem/1208/statistics"><span class="glyphicon glyphicon-stats"></span> 统计</a>
+<a role="button" class="btn btn-primary pull-right" href="/data/1208.zip" target="_blank"><span class="glyphicon glyphicon-download-alt"></span> 下载数据</a>
+
+<ul class="nav nav-tabs" role="tablist">
+	<li class="active"><a href="#tab-statement" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-book"></span> 描述</a></li>
+	<li><a href="#tab-submit-answer" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-upload"></span> 提交</a></li>
+		<li><a href="#tab-custom-test" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-console"></span> 自定义测试</a></li>
+			<li><a href="#tab-tutorial" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-book"></span> 题解</a></li>
+			</ul>
+<div class="tab-content">
+	<div class="tab-pane active" id="tab-statement">
+		<article class="top-buffer-md"><h3>Description</h3><p>最近，阿Q开了一间宠物收养所。收养所提供两种服务：收养被主人遗弃的宠物和让新的主人领养这些宠物。每个领养者都希望领养到自己满意的宠物，阿Q根据领养者的要求通过他自己发明的一个特殊的公式，得出该领养者希望领养的宠物的特点值a（a是一个正整数，a&lt;2^31），而他也给每个处在收养所的宠物一个特点值。这样他就能够很方便的处理整个领养宠物的过程了，宠物收养所总是会有两种情况发生：被遗弃的宠物过多或者是想要收养宠物的人太多，而宠物太少。 1． 被遗弃的宠物过多时，假若到来一个领养者，这个领养者希望领养的宠物的特点值为a，那么它将会领养一只目前未被领养的宠物中特点值最接近a的一只宠物。（任何两只宠物的特点值都不可能是相同的，任何两个领养者的希望领养宠物的特点值也不可能是一样的）如果有两只满足要求的宠物，即存在两只宠物他们的特点值分别为a-b和a+b，那么领养者将会领养特点值为a-b的那只宠物。 2． 收养宠物的人过多，假若到来一只被收养的宠物，那么哪个领养者能够领养它呢？能够领养它的领养者，是那个希望被领养宠物的特点值最接近该宠物特点值的领养者，如果该宠物的特点值为a，存在两个领养者他们希望领养宠物的特点值分别为a-b和a+b，那么特点值为a-b的那个领养者将成功领养该宠物。 一个领养者领养了一个特点值为a的宠物，而它本身希望领养的宠物的特点值为b，那么这个领养者的不满意程度为abs(a-b)。【任务描述】你得到了一年当中，领养者和被收养宠物到来收养所的情况，希望你计算所有收养了宠物的领养者的不满意程度的总和。这一年初始时，收养所里面既没有宠物，也没有领养者。</p><h3>Input</h3><p>第一行为一个正整数n，n&lt;=80000，表示一年当中来到收养所的宠物和领养者的总数。接下来的n行，按到来时间的先后顺序描述了一年当中来到收养所的宠物和领养者的情况。每行有两个正整数a, b，其中a=0表示宠物，a=1表示领养者，b表示宠物的特点值或是领养者希望领养宠物的特点值。（同一时间呆在收养所中的，要么全是宠物，要么全是领养者，这些宠物和领养者的个数不会超过10000个）</p><h3>Output</h3><p>仅有一个正整数，表示一年当中所有收养了宠物的领养者的不满意程度的总和mod 1000000以后的结果。</p><h3>Sample Input</h3>5<br />
+0 2<br />
+0 4<br />
+1 3<br />
+1 2<br />
+1 5<br />
+<h3>Sample Output</h3>3<br />
+(abs(3-2) + abs(2-4)=3，最后一个领养者没有宠物可以领养)<br />
+<h3>Hint</h3><h3>Source</h3></article>
+	</div>
+	<div class="tab-pane" id="tab-submit-answer">
+		<div class="top-buffer-sm"></div>
+				<form action="/problem/1208" method="post" class="form-horizontal" id="form-answer" enctype="multipart/form-data"><input type="hidden" name="_token" value="W7W587dknTHyKX3bNgAxkMsVIozfdkEoXwed39B8BhlDtZsf0CREBFP4DAVS" /><div class="form-group" id="form-group-answer_answer"></div>
+<script type="text/javascript">
+$('#form-group-answer_answer').source_code_form_group('answer_answer', '源文件:answer', "<option selected=\"selected\">C++<\/option><option>Python2.7<\/option><option>Java7<\/option><option>C++11<\/option><option>Python3<\/option><option>Java8<\/option><option>C<\/option><option>Pascal<\/option>");
+</script><div class="text-center"><button type="submit" id="button-submit-answer" name="submit-answer" value="answer" class="btn btn-default">提交</button></div></form><script type="text/javascript">
+$(document).ready(function() {
+	$('#form-answer').submit(function(e) {
+		var ok = true;
+		var post_data = {};
+		if (post_data != {}) {
+			post_data['check-answer'] = "";
+			$.ajax({
+				url : '/problem/1208',
+				type : 'POST',
+				dataType : 'json',
+				async : false,
+
+				data : post_data,
+				success : function(data) {
+					if (data.extra != undefined) {
+						alert(data.extra);
+						ok = false;
+					}
+				}
+			});
+		}
+		$(this).find("input[type='file']").each(function() {
+			for (var i = 0; i < this.files.length; i++) {
+				if (this.files[i].size > 10 * 1024 * 1024) {
+					$('#div-' + $(this).attr('name')).addClass('has-error');
+					$('#help-' + $(this).attr('name')).text('文件大小不能超过10M');
+					ok = false;
+				} else {
+					$('#div-' + $(this).attr('name')).removeClass('has-error');
+					$('#help-' + $(this).attr('name')).text('');
+				}
+			}
+		});
+		return ok;
+	});
+});
+</script>	</div>
+		<div class="tab-pane" id="tab-tutorial">
+		<div class="top-buffer-sm"></div>
+		<ul>
+						<li><a href="https://www.cnblogs.com/ruojisun/p/7338390.html" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/suika/p/8672189.html" target="_blank" rel="noopener noreferrer">BZOJ_1208_[HNOI2004]宠物收养所_SPLAY</a></li>
+						<li><a href="https://blog.csdn.net/ALPS233/article/details/50421258" target="_blank" rel="noopener noreferrer">【BZOJ 1208】【HNOI2004】宠物收养所  [splay]</a></li>
+						<li><a href="https://www.cnblogs.com/SilverNebula/p/6123101.html" target="_blank" rel="noopener noreferrer">Bzoj1208 [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/laekov/article/details/32942647" target="_blank" rel="noopener noreferrer">BZOJ1208 [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/qscqesze/p/4365876.html" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所 SET的妙用</a></li>
+						<li><a href="https://blog.csdn.net/johann_oier/article/details/47427839" target="_blank" rel="noopener noreferrer">【bzoj1208】[HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/FallDream/p/bzoj1208.html" target="_blank" rel="noopener noreferrer">[bzoj1208][HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/AaronGZK/article/details/50180711" target="_blank" rel="noopener noreferrer">bzoj1208【HNOI2004】宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/KXL5180/article/details/95633912" target="_blank" rel="noopener noreferrer">BZOJ1208   [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/jason2003/p/10097157.html" target="_blank" rel="noopener noreferrer">bzoj1208 宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/yearwhk/p/5134844.html" target="_blank" rel="noopener noreferrer">BZOJ 1208 - set / Treap</a></li>
+						<li><a href="https://www.cnblogs.com/BeyondW/p/5731227.html" target="_blank" rel="noopener noreferrer">BZOJ1208:  [HNOI2004]宠物收养所 平衡树 Treap 模板题</a></li>
+						<li><a href="https://blog.csdn.net/Clove_unique/article/details/50960335" target="_blank" rel="noopener noreferrer">[BZOJ1208][HNOI2004]宠物收养所（平衡树splay）</a></li>
+						<li><a href="https://blog.csdn.net/WADuan2/article/details/78841750" target="_blank" rel="noopener noreferrer">BZOJ[1208][HNOI2004]宠物收养所 Treap</a></li>
+						<li><a href="https://blog.csdn.net/Icefox_zhx/article/details/79330627" target="_blank" rel="noopener noreferrer">bzoj1208 [HNOI2004]宠物收养所（平衡树）</a></li>
+						<li><a href="https://blog.csdn.net/discreeter/article/details/52996354" target="_blank" rel="noopener noreferrer">bzoj 1208	宠物收养所 splay或set</a></li>
+						<li><a href="https://blog.csdn.net/just_sort/article/details/56016360" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所 set,或者splay</a></li>
+						<li><a href="https://blog.csdn.net/weixin_43944486/article/details/102449795" target="_blank" rel="noopener noreferrer">【BZOJ 1208】[HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/evan-oi/archive/2012/03/31/2427287.html" target="_blank" rel="noopener noreferrer">BZOJ 1208 HNOI 2004 宠物收养所 splay</a></li>
+						<li><a href="https://www.cnblogs.com/DaD3zZ-Beyonder/p/5335651.html" target="_blank" rel="noopener noreferrer">【BZOJ-1208】宠物收养所     Splay</a></li>
+						<li><a href="https://blog.csdn.net/jpwang8/article/details/78904295" target="_blank" rel="noopener noreferrer">bzoj1208 [HNOI2004] 宠物收养所 splay</a></li>
+						<li><a href="https://www.cnblogs.com/Macaulish/p/4299087.html" target="_blank" rel="noopener noreferrer">bzoj1208: [HNOI2004]宠物收养所 （sbt）</a></li>
+						<li><a href="https://www.cnblogs.com/PaperCloud/p/10161756.html" target="_blank" rel="noopener noreferrer">[bzoj 1208][HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/qq_39972971/article/details/80861758" target="_blank" rel="noopener noreferrer">【BZOJ1208】【HNOI2004】宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/gengchen/p/6482729.html" target="_blank" rel="noopener noreferrer">[bzoj1208][HNOI2004]宠物收养所——splay</a></li>
+						<li><a href="https://blog.csdn.net/haut_ykc/article/details/73656085" target="_blank" rel="noopener noreferrer">BZOJ  1208-宠物收养所-（set）</a></li>
+						<li><a href="https://www.cnblogs.com/SiriusRen/p/9371569.html" target="_blank" rel="noopener noreferrer">BZOJ 1208 set</a></li>
+						<li><a href="https://blog.csdn.net/Game_Acm/article/details/81460187" target="_blank" rel="noopener noreferrer">BZOJ 1208 Splay伸展树</a></li>
+						<li><a href="https://blog.csdn.net/ACerAndAKer/article/details/81158730" target="_blank" rel="noopener noreferrer">BZOJ1208&amp;&amp;洛谷P2286 [HNOI2004]宠物收养场</a></li>
+						<li><a href="https://blog.csdn.net/Dan__ge/article/details/51287292" target="_blank" rel="noopener noreferrer">BZOJ 1208 平衡树Treap模版题</a></li>
+						<li><a href="https://www.cnblogs.com/nbwzyzngyl/p/7955690.html" target="_blank" rel="noopener noreferrer">BZOJ1208 宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/u013703661/article/details/20464875" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/Dndlns/p/7867117.html" target="_blank" rel="noopener noreferrer">【bzoj1208 宠物收养所】</a></li>
+						<li><a href="https://blog.csdn.net/faojie/article/details/78639843" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/CHN_JZ/article/details/78648625" target="_blank" rel="noopener noreferrer">[Splay]BZOJ 1208——[HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/zxyqzy/p/10140229.html" target="_blank" rel="noopener noreferrer">[HNOI2004]宠物收养场 BZOJ1208 splay tree</a></li>
+						<li><a href="https://www.cnblogs.com/huibixiaoxing/p/8025628.html" target="_blank" rel="noopener noreferrer">BZOJ1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/syh0313/article/details/89844473" target="_blank" rel="noopener noreferrer">bzoj1208</a></li>
+						<li><a href="https://blog.csdn.net/hmc0411/article/details/78273438" target="_blank" rel="noopener noreferrer">BZOJ-1208: [HNOI2004]宠物收养所 (splay 查询前驱后继 set也可)</a></li>
+						<li><a href="https://blog.csdn.net/qq_39774369/article/details/80584771" target="_blank" rel="noopener noreferrer">[BZOJ1208][HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/mmlz/p/4294496.html" target="_blank" rel="noopener noreferrer">BZOJ 1208 宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/youhavepeople/article/details/72779519" target="_blank" rel="noopener noreferrer">[bzoj1208][HNOI2004]宠物收养所 SBT删点，前驱，后继</a></li>
+						<li><a href="https://blog.csdn.net/whzzt/article/details/51106985" target="_blank" rel="noopener noreferrer">[BZOJ1208] [HNOI2004] 宠物收养所 - splay</a></li>
+						<li><a href="https://blog.csdn.net/Loi_a/article/details/52672082" target="_blank" rel="noopener noreferrer">bzoj 1208 宠物收养所 Splay</a></li>
+						<li><a href="https://blog.csdn.net/ALXPCUN/article/details/50424170" target="_blank" rel="noopener noreferrer">bzoj1208.宠物收养所(splay)</a></li>
+						<li><a href="https://www.cnblogs.com/BLADEVIL/p/3466764.html" target="_blank" rel="noopener noreferrer">bzoj 1208 HNOI2004宠物收养所 平衡树</a></li>
+						<li><a href="https://www.cnblogs.com/wulala979/p/3507769.html" target="_blank" rel="noopener noreferrer">bzoj 1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/ljzalc1022/p/8758501.html" target="_blank" rel="noopener noreferrer">[bzoj1208][HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/JSZX11556/p/4470434.html" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所(BST)</a></li>
+						<li><a href="https://blog.csdn.net/lwqq3/article/details/79456112" target="_blank" rel="noopener noreferrer">BZOJ1208: [HNOI2004]宠物收养所（splay)</a></li>
+						<li><a href="https://blog.csdn.net/BeyondW__/article/details/52123440" target="_blank" rel="noopener noreferrer">BZOJ1208:  [HNOI2004]宠物收养所 平衡树 Treap 模板题</a></li>
+						<li><a href="https://www.cnblogs.com/nancheng58/p/10068091.html" target="_blank" rel="noopener noreferrer">Bzoj 1208: [HNOI2004]宠物收养所(splay)</a></li>
+						<li><a href="https://blog.csdn.net/zhhx2001/article/details/51868173" target="_blank" rel="noopener noreferrer">bzoj1208(set或splay，改天用它练splay的模板)</a></li>
+						<li><a href="https://blog.csdn.net/BlackJack_/article/details/76010615" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所 平衡树/set</a></li>
+						<li><a href="https://www.cnblogs.com/nbwzyzngyl/p/8280050.html" target="_blank" rel="noopener noreferrer">BZOJ1208 [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/wuminyan/p/5119658.html" target="_blank" rel="noopener noreferrer">BZOJ1208[HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/hahalidaxin/article/details/51017546" target="_blank" rel="noopener noreferrer">bzoj1208 [HNOI2004]宠物收养所（STL，Treap）</a></li>
+						<li><a href="https://blog.csdn.net/u013233739/article/details/21405947" target="_blank" rel="noopener noreferrer">【splay】BZOJ1208宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/m0_38083668/article/details/80024074" target="_blank" rel="noopener noreferrer">BZOJ1208 宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/shenben/p/6242023.html" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/rolight/p/4276783.html" target="_blank" rel="noopener noreferrer">BZOJ 1208 宠物饲养所 Splay</a></li>
+						<li><a href="https://www.cnblogs.com/CXCXCXC/p/5095092.html" target="_blank" rel="noopener noreferrer">bzoj1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/liumengyue/p/5218487.html" target="_blank" rel="noopener noreferrer">【bzoj1208】[HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/BerryKanry/article/details/72933905" target="_blank" rel="noopener noreferrer">BZOJ 1208 浅谈treap+treap全操作模板（BZOJ 3224）</a></li>
+						<li><a href="https://www.cnblogs.com/Cptraser/p/8592492.html" target="_blank" rel="noopener noreferrer">BZOJ1208_宠物收养所_KEY</a></li>
+						<li><a href="https://blog.csdn.net/dreaming__ldx/article/details/80943767" target="_blank" rel="noopener noreferrer">2018.07.06 BZOJ1208: HNOI2004宠物收养所（非旋treap）</a></li>
+						<li><a href="https://blog.csdn.net/KIKO_caoyue/article/details/91550661" target="_blank" rel="noopener noreferrer">【BZOJ1208】平衡树</a></li>
+						<li><a href="https://www.cnblogs.com/yejinru/archive/2012/09/01/2666522.html" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所  SBT</a></li>
+						<li><a href="https://blog.csdn.net/llgyc/article/details/51052403" target="_blank" rel="noopener noreferrer">【BZOJ1208】【HNOI2004】宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/chunkitlau/article/details/52225811" target="_blank" rel="noopener noreferrer">【bzoj1208】【HNOI2004】【宠物收养所】【平衡树】【set】</a></li>
+						<li><a href="https://www.cnblogs.com/Kong-Ruo/p/7780352.html" target="_blank" rel="noopener noreferrer">bzoj1208Splay</a></li>
+						<li><a href="https://blog.csdn.net/Horizon_SMZ/article/details/47338135" target="_blank" rel="noopener noreferrer">[BZOJ 1208]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/mrsheep/p/8118447.html" target="_blank" rel="noopener noreferrer">BZOJ 1208 [HNOI2004]宠物收养所 | SPlay模板题</a></li>
+						<li><a href="https://www.cnblogs.com/acmsong/p/7594133.html" target="_blank" rel="noopener noreferrer">[bzoj 1208]STL水过</a></li>
+						<li><a href="https://blog.csdn.net/zhouyuyang233/article/details/69675655" target="_blank" rel="noopener noreferrer">bzoj1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/crackpotisback/p/4864832.html" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/hjt_fathomless/article/details/52674881" target="_blank" rel="noopener noreferrer">bzoj 1208 宠物收养所 Splay入门</a></li>
+						<li><a href="https://www.cnblogs.com/Extended-Ash/p/8312609.html" target="_blank" rel="noopener noreferrer">Bzoj1208 宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/IUUUUUUUskyyy/p/6719786.html" target="_blank" rel="noopener noreferrer">AC日记——宠物收养所 bzoj 1208</a></li>
+						<li><a href="https://blog.csdn.net/SAI_D/article/details/44259153" target="_blank" rel="noopener noreferrer">BZOJ 1208 [HNOI 2004] 宠物收养所 （splay）</a></li>
+						<li><a href="https://blog.csdn.net/u012915516/article/details/45971051" target="_blank" rel="noopener noreferrer">bzoj1208  splay伸展树</a></li>
+						<li><a href="https://blog.csdn.net/Dream_maker_yk/article/details/80369748" target="_blank" rel="noopener noreferrer">BZOJ1208  HNOI2004 宠物收养所 【非旋转Treap】</a></li>
+						<li><a href="https://blog.csdn.net/qq_41357771/article/details/79813319" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所【Treap】</a></li>
+						<li><a href="https://www.cnblogs.com/GJKACAC/p/4706212.html" target="_blank" rel="noopener noreferrer">BZOJ1208 [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/Rainbow6174/article/details/50402675" target="_blank" rel="noopener noreferrer">BZOJ 1208 [HNOI2004] 宠物收养所 题解&amp;代码</a></li>
+						<li><a href="https://blog.csdn.net/Orion_Rigel/article/details/53410922" target="_blank" rel="noopener noreferrer">BZOJ 1208 [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/JacaJava/article/details/78681386" target="_blank" rel="noopener noreferrer">Bzoj1208 宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/yousiki/p/6130472.html" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/zhouzhendong/p/BZOJ1208.html" target="_blank" rel="noopener noreferrer">BZOJ1208 [HNOI2004]宠物收养所 splay</a></li>
+						<li><a href="https://blog.csdn.net/TJ_Green_Liu/article/details/84970791" target="_blank" rel="noopener noreferrer">bzoj1208 宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/chen20000804/article/details/52045725" target="_blank" rel="noopener noreferrer">bzoj 1208</a></li>
+						<li><a href="https://blog.csdn.net/wanherun/article/details/77924257" target="_blank" rel="noopener noreferrer">bzoj1208 [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/ZlycerQan/p/7569867.html" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/MikuKnight/p/9045155.html" target="_blank" rel="noopener noreferrer">bzoj1208</a></li>
+						<li><a href="https://blog.csdn.net/zhaoyh2000/article/details/59699415" target="_blank" rel="noopener noreferrer">【bzoj1208】[HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/JokerPoker/article/details/42233763" target="_blank" rel="noopener noreferrer">bzoj 1208 [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/Free__Radical/article/details/41411319" target="_blank" rel="noopener noreferrer">Bzoj 1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/JeremyGJY/p/5921719.html" target="_blank" rel="noopener noreferrer">【Treap】[BZOJ 1208]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/everlasting_20141622/article/details/78293125" target="_blank" rel="noopener noreferrer">bzoj 1208: [HNOI2004]宠物收养所 stl</a></li>
+						<li><a href="https://www.cnblogs.com/Macaulish/p/4299087.html" target="_blank" rel="noopener noreferrer">bzoj1208: [HNOI2004]宠物收养所 （sbt）</a></li>
+						<li><a href="https://blog.csdn.net/herobrine_tkj/article/details/53907992" target="_blank" rel="noopener noreferrer">bzoj 1208</a></li>
+						<li><a href="https://blog.csdn.net/w_yqts/article/details/70244034" target="_blank" rel="noopener noreferrer">【bzoj1208】[HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/xiao-ju-ruo-xjr/p/6295544.html" target="_blank" rel="noopener noreferrer">[BZOJ1208][HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/Cynthia_wjyi/article/details/50211189" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/Yokel062/p/11486153.html" target="_blank" rel="noopener noreferrer">BZOJ 1208 宠物收养所（set 或者 splay）</a></li>
+						<li><a href="https://www.cnblogs.com/myx12345/p/6257607.html" target="_blank" rel="noopener noreferrer">【BZOJ1208】宠物收养所（splay）</a></li>
+						<li><a href="https://blog.csdn.net/u010576722/article/details/52684531" target="_blank" rel="noopener noreferrer">BZOJ 1208, 宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/lidaxin/p/5036041.html" target="_blank" rel="noopener noreferrer">bzoj1208 [HNOI2004]宠物收养所（STL，Treap）</a></li>
+						<li><a href="https://www.cnblogs.com/AWCXV/p/8757311.html" target="_blank" rel="noopener noreferrer">【BZOJ 1208】[HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/void-f/p/8390458.html" target="_blank" rel="noopener noreferrer">[BZOJ1208]宠物收养所（Splay）</a></li>
+						<li><a href="https://www.cnblogs.com/Shymuel/p/4656295.html" target="_blank" rel="noopener noreferrer">BZOJ1208|HNOI旅行comf|并查集</a></li>
+						<li><a href="https://blog.csdn.net/stevensonson/article/details/79594426" target="_blank" rel="noopener noreferrer">BZOJ1208——Treap</a></li>
+						<li><a href="https://www.cnblogs.com/songorz/p/10124772.html" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/rabbit_fjq_dick/article/details/78318689" target="_blank" rel="noopener noreferrer">bzoj1208 [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/qq_36808030/article/details/78903783" target="_blank" rel="noopener noreferrer">bzoj 1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/WNJXYK/p/4117281.html" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/keshuqi/p/6475624.html" target="_blank" rel="noopener noreferrer">[bzoj1208][HNOI2004][宠物收养所] (平衡树)</a></li>
+						<li><a href="https://blog.csdn.net/zz_ylolita/article/details/50782508" target="_blank" rel="noopener noreferrer">bzoj1208：[HNOI2004]宠物收养所-splay</a></li>
+						<li><a href="https://www.cnblogs.com/LanrTabe/p/10165691.html" target="_blank" rel="noopener noreferrer">[BZOJ1208/Luogu2286][HNOI2004]宠物收养场</a></li>
+						<li><a href="https://blog.csdn.net/u010660276/article/details/43704397" target="_blank" rel="noopener noreferrer">SBT(BZOJ1208)</a></li>
+						<li><a href="https://www.cnblogs.com/RabbitHu/p/BZOJ1208.html" target="_blank" rel="noopener noreferrer">BZOJ 1208 宠物收养所 | 平衡树模板题</a></li>
+						<li><a href="https://blog.csdn.net/oWuHen12/article/details/79634027" target="_blank" rel="noopener noreferrer">BZOJ 1208 宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/slongle_amazing/article/details/50495029" target="_blank" rel="noopener noreferrer">[BZOJ1208] [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/EOD_realize/article/details/41901887" target="_blank" rel="noopener noreferrer">bzoj1208: [HNOI2004]宠物收养所 SBT&amp;&amp;Splay</a></li>
+						<li><a href="https://www.cnblogs.com/JKAI/p/6942171.html" target="_blank" rel="noopener noreferrer">【bzoj1208】宠物收养所——treap</a></li>
+						<li><a href="https://www.cnblogs.com/Sunnie69/p/5490334.html" target="_blank" rel="noopener noreferrer">BZOJ_1208_&amp;_Codevs_1258_[HNOI2004]_宠物收养所_(平衡树/set)</a></li>
+						<li><a href="https://blog.csdn.net/P1atform/article/details/78671039" target="_blank" rel="noopener noreferrer">bzoj #1208 宠物收养所（splay）</a></li>
+						<li><a href="https://www.cnblogs.com/Leohh/p/7508139.html" target="_blank" rel="noopener noreferrer">BZOJ 1208 [HNOI2004]宠物收养所：Splay（伸展树）</a></li>
+						<li><a href="https://blog.csdn.net/bestFy/article/details/78628008" target="_blank" rel="noopener noreferrer">bzoj1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/ziliuziliu/p/5190897.html" target="_blank" rel="noopener noreferrer">BZOJ 1208 宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/magical_qting/article/details/50274679" target="_blank" rel="noopener noreferrer">bzoj 1208 [HNOI2004]宠物收养所 Splay</a></li>
+						<li><a href="https://blog.csdn.net/liutian429073576/article/details/49977767" target="_blank" rel="noopener noreferrer">BZOJ1208: [HNOI2004]宠物收养所  Splay</a></li>
+						<li><a href="https://blog.csdn.net/u011686226/article/details/51886153" target="_blank" rel="noopener noreferrer">BZOJ 1208 宠物收养所 Splay树</a></li>
+						<li><a href="https://www.cnblogs.com/zsben991126/p/10003581.html" target="_blank" rel="noopener noreferrer">bzoj1208splay模板题</a></li>
+						<li><a href="https://blog.csdn.net/elijahqi/article/details/79333712" target="_blank" rel="noopener noreferrer">bzoj1208 [HNOI2004]宠物收养场</a></li>
+						<li><a href="https://blog.csdn.net/wzq_QwQ/article/details/48832143" target="_blank" rel="noopener noreferrer">BZOJ 1208 [HNOI2004]宠物收养所 treap</a></li>
+						<li><a href="https://www.cnblogs.com/harden/p/6195622.html" target="_blank" rel="noopener noreferrer">宠物收养所（bzoj1208）</a></li>
+						<li><a href="https://www.cnblogs.com/kls123/p/10726744.html" target="_blank" rel="noopener noreferrer">bzoj 1208: [HNOI2004]宠物收养所 (Treap）</a></li>
+						<li><a href="https://blog.csdn.net/xym_CSDN/article/details/50858574" target="_blank" rel="noopener noreferrer">【codevs1285】【BZOJ1208】宠物收养所，splay练习</a></li>
+						<li><a href="https://blog.csdn.net/SenyeLicone/article/details/53897868" target="_blank" rel="noopener noreferrer">BZOJ 1208 [HNOI2004] 宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/a1799342217/article/details/78680297" target="_blank" rel="noopener noreferrer">洛谷P2286 [HNOI2004]宠物收养场（BZOJ1208）</a></li>
+						<li><a href="https://www.cnblogs.com/NanoApe/p/4396745.html" target="_blank" rel="noopener noreferrer">BZOJ-1208 宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/zyfzyf/p/3923000.html" target="_blank" rel="noopener noreferrer">BZOJ1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/hero_ds/article/details/45893611" target="_blank" rel="noopener noreferrer">bzoj 1208 splay基本操作（插入，查询，删除）</a></li>
+						<li><a href="https://blog.csdn.net/CRTorlonia/article/details/79340005" target="_blank" rel="noopener noreferrer">[HNOI2004] BZOJ1208 宠物收养所 set乱搞</a></li>
+						<li><a href="https://www.cnblogs.com/gosick/p/11252161.html" target="_blank" rel="noopener noreferrer">[BZOJ1208][HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/N-C-Derek/archive/2013/01/10/2855315.html" target="_blank" rel="noopener noreferrer">【BZOJ1208】【HNOI2004】宠物收养所（splay）</a></li>
+						<li><a href="https://blog.csdn.net/sinat_34550050/article/details/54923824" target="_blank" rel="noopener noreferrer">Bzoj 1208: [HNOI2004]宠物收养所(splay)</a></li>
+						<li><a href="https://blog.csdn.net/CreationAugust/article/details/41790437" target="_blank" rel="noopener noreferrer">【平衡树·水】BZOJ1208HNOI2004宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/ciao-sora/p/6164246.html" target="_blank" rel="noopener noreferrer">_bzoj1208 [HNOI2004]宠物收养所【Splay】</a></li>
+						<li><a href="https://www.cnblogs.com/zig-zag/archive/2013/03/28/2987378.html" target="_blank" rel="noopener noreferrer">bzoj 1208 宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/DMoon/p/5308333.html" target="_blank" rel="noopener noreferrer">【BZOJ1208】[HNOI2004]宠物收养所 Splay</a></li>
+						<li><a href="https://blog.csdn.net/jiangyuze831/article/details/39370983" target="_blank" rel="noopener noreferrer">BZOJ 1208 HNOI2004 宠物收养所 平衡树/set</a></li>
+						<li><a href="https://blog.csdn.net/kidsummer/article/details/82353084" target="_blank" rel="noopener noreferrer">bzoj 1208: [HNOI2004]宠物收养所(set 用法）</a></li>
+						<li><a href="https://www.cnblogs.com/xuanyiming/p/7875079.html" target="_blank" rel="noopener noreferrer">bzoj1208</a></li>
+						<li><a href="https://blog.csdn.net/nixinyis/article/details/68957431" target="_blank" rel="noopener noreferrer">【BZOJ 1208】【HNOI 2004】宠物收养所【treap】|【STL】</a></li>
+						<li><a href="https://www.cnblogs.com/luyouqi233/p/8126823.html" target="_blank" rel="noopener noreferrer">BZOJ1208：[HNOI2004]宠物收养所——题解</a></li>
+						<li><a href="https://blog.csdn.net/Gx_Man_VIP/article/details/88726144" target="_blank" rel="noopener noreferrer">Bzoj P1208 [HNOI2004]宠物收养所___set</a></li>
+						<li><a href="https://blog.csdn.net/g1n0st/article/details/57075134" target="_blank" rel="noopener noreferrer">[BZOJ1208][[HNOI2004]宠物收养所][STL set+二分]</a></li>
+						<li><a href="https://blog.csdn.net/qq_40273481/article/details/86173929" target="_blank" rel="noopener noreferrer">[HNOI2004]宠物收养场 BZOJ1208 splay tree</a></li>
+						<li><a href="https://blog.csdn.net/u012969412/article/details/44906445" target="_blank" rel="noopener noreferrer">BZOJ 1208 （可持久化Treap,合并与分裂操作）</a></li>
+						<li><a href="https://www.cnblogs.com/yyc-jack-0920/p/7891311.html" target="_blank" rel="noopener noreferrer">bzoj 1208 宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/fzl194/p/9743774.html" target="_blank" rel="noopener noreferrer">BZOJ 1208 宠物收养所 set+二分</a></li>
+						<li><a href="https://blog.csdn.net/LOI_DQS/article/details/50180383" target="_blank" rel="noopener noreferrer">【bzoj1208】[HNOI2004]宠物收养所 Splay</a></li>
+						<li><a href="https://blog.csdn.net/pbihao/article/details/53017932" target="_blank" rel="noopener noreferrer">【BZOJ 1208】 [HNOI2004]宠物收养所  splay模板（指针）+set</a></li>
+						<li><a href="https://www.cnblogs.com/19992147orz/p/6201130.html" target="_blank" rel="noopener noreferrer">bzoj1208</a></li>
+						<li><a href="https://blog.csdn.net/A_loud_name/article/details/78926705" target="_blank" rel="noopener noreferrer">[HNOI2004]宠物收养所 bzoj 1208 splay</a></li>
+						<li><a href="https://blog.csdn.net/haha593572013/article/details/8034223" target="_blank" rel="noopener noreferrer">bzoj  1208 宠物收养所   splay</a></li>
+						<li><a href="https://blog.csdn.net/FSAHFGSADHSAKNDAS/article/details/50700364" target="_blank" rel="noopener noreferrer">bzoj1208[HDOI2004] 宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/mengfanrong/p/4733777.html" target="_blank" rel="noopener noreferrer">BZOJ 1208 HNOI2004 宠物收容所 平衡树/set</a></li>
+						<li><a href="https://blog.csdn.net/Ep1C_HeReT1c/article/details/54135679" target="_blank" rel="noopener noreferrer">BZOJ1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/clover_hxy/article/details/50961499" target="_blank" rel="noopener noreferrer">bzoj 1208[HNOI 2004] 宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/ihopenot/p/5918810.html" target="_blank" rel="noopener noreferrer">Bzoj1208--Hnoi2004宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/WQHui/p/8576352.html" target="_blank" rel="noopener noreferrer">bzoj1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/thmyl/p/8067676.html" target="_blank" rel="noopener noreferrer">bzoj 1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/zbtrs/p/8244017.html" target="_blank" rel="noopener noreferrer">bzoj1208 [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/u010710717/article/details/19207545" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所 (Splaytree)</a></li>
+						<li><a href="https://blog.csdn.net/qhpeklh5959/article/details/15683327" target="_blank" rel="noopener noreferrer">BZOJ1208 宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/wls001/p/7201072.html" target="_blank" rel="noopener noreferrer">[BZOJ1208][HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/ljh2000-jump/p/5528687.html" target="_blank" rel="noopener noreferrer">BZOJ1208 宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/neighthorn/p/6147169.html" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/WizardCowboy/p/7613570.html" target="_blank" rel="noopener noreferrer">[BZOJ1208]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/chensiang/p/4616997.html" target="_blank" rel="noopener noreferrer">bzoj1208 宠物收养所treap/splay/set</a></li>
+						<li><a href="https://blog.csdn.net/woshirenNo01/article/details/20643829" target="_blank" rel="noopener noreferrer">BZOJ 1208</a></li>
+						<li><a href="https://blog.csdn.net/Zvezda_/article/details/46947523" target="_blank" rel="noopener noreferrer">[BZOJ1208][HNOI2004]宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/Hanks_o/article/details/78203343" target="_blank" rel="noopener noreferrer">bzoj1208: [HNOI2004]宠物收养所（伸展树）</a></li>
+						<li><a href="https://blog.csdn.net/doctor_godder/article/details/50329573" target="_blank" rel="noopener noreferrer">BZOJ1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/dream-maker-yk/p/9676410.html" target="_blank" rel="noopener noreferrer">BZOJ1208  HNOI2004 宠物收养所 【非旋转Treap】</a></li>
+						<li><a href="https://www.cnblogs.com/sbfhy/p/6512665.html" target="_blank" rel="noopener noreferrer">bzoj 1208   set，或treap或splay(待补)</a></li>
+						<li><a href="https://www.cnblogs.com/newera/p/9637536.html" target="_blank" rel="noopener noreferrer">[BZOJ 1208] 宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/jhz033/p/5994230.html" target="_blank" rel="noopener noreferrer">bzoj 1208: [HNOI2004]宠物收养所  set</a></li>
+						<li><a href="https://www.cnblogs.com/Amphetamine/p/7097136.html" target="_blank" rel="noopener noreferrer">BZOJ1208</a></li>
+						<li><a href="https://blog.csdn.net/song_hai_lei/article/details/88404123" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/ezyzy/p/6137828.html" target="_blank" rel="noopener noreferrer">bzoj 1208 splay模板题2</a></li>
+						<li><a href="https://www.cnblogs.com/Extended-Ash/p/9477184.html" target="_blank" rel="noopener noreferrer">Bzoj1208 宠物收养所</a></li>
+						<li><a href="https://blog.csdn.net/gddswlz/article/details/9094811" target="_blank" rel="noopener noreferrer">[bzoj1208] [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/silver-bullet/archive/2013/03/27/2985205.html" target="_blank" rel="noopener noreferrer">bzoj 1208 宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/AseanA/p/7489032.html" target="_blank" rel="noopener noreferrer">刷题总结——宠物收养所（bzoj1208）</a></li>
+						<li><a href="https://blog.csdn.net/yslcl12345/article/details/51001262" target="_blank" rel="noopener noreferrer">bzoj1208 [HNOI2004]宠物收养所 splay入门</a></li>
+						<li><a href="https://www.cnblogs.com/gaojunonly1/p/11173173.html" target="_blank" rel="noopener noreferrer">bzoj1208</a></li>
+						<li><a href="https://www.cnblogs.com/arbitrary/p/3249777.html" target="_blank" rel="noopener noreferrer">bzoj 1208 宠物收养所--splay</a></li>
+						<li><a href="https://www.cnblogs.com/XSamsara/p/9059420.html" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所【Treap】</a></li>
+						<li><a href="https://www.cnblogs.com/xydddd/p/5243661.html" target="_blank" rel="noopener noreferrer">bzoj 1208: [HNOI2004]宠物收养所</a></li>
+						<li><a href="https://www.cnblogs.com/evan-oi/archive/2012/03/24/2415297.html" target="_blank" rel="noopener noreferrer">BZOJ 1208 HNOI 2004 宠物收养所 STL set 应用</a></li>
+						<li><a href="https://blog.csdn.net/cq_phqg/article/details/39029661" target="_blank" rel="noopener noreferrer">bzoj1208（splay tree）</a></li>
+						<li><a href="https://blog.csdn.net/qq_42576687/article/details/98960991" target="_blank" rel="noopener noreferrer">bzoj1208(宠物收养所 splay模板)</a></li>
+						<li><a href="https://blog.csdn.net/Tony5t4rk/article/details/88370338" target="_blank" rel="noopener noreferrer">BZOJ 1208 洛谷 P2286 [HNOI2004]宠物收养所(伸展树Splay)</a></li>
+						<li><a href="https://blog.csdn.net/The_useless/article/details/54022770" target="_blank" rel="noopener noreferrer">BZOJ 1208: [HNOI2004]宠物收养所 (Treap)</a></li>
+					</ul>
+	</div>
+			<div class="tab-pane" id="tab-custom-test">
+		<div class="top-buffer-sm"></div>
+		<form action="/problem/1208" method="post" class="form-horizontal" id="form-custom_test" enctype="multipart/form-data"><input type="hidden" name="_token" value="W7W587dknTHyKX3bNgAxkMsVIozfdkEoXwed39B8BhlDtZsf0CREBFP4DAVS" /><div class="form-group" id="form-group-custom_test_answer"></div>
+<script type="text/javascript">
+$('#form-group-custom_test_answer').source_code_form_group('custom_test_answer', '源文件:answer', "<option selected=\"selected\">C++<\/option><option>Python2.7<\/option><option>Java7<\/option><option>C++11<\/option><option>Python3<\/option><option>Java8<\/option><option>C<\/option><option>Pascal<\/option>");
+</script><div class="form-group" id="form-group-custom_test_input"></div>
+<script type="text/javascript">
+$('#form-group-custom_test_input').text_file_form_group('custom_test_input', '文本文件:input.txt');
+</script><div id="div-custom_test_result"></div><div class="text-center"><button type="submit" id="button-submit-custom_test" name="submit-custom_test" value="custom_test" class="btn btn-default">运行</button></div></form><script type="text/javascript">
+$(document).ready(function() {
+	$('#form-custom_test').keydown(function(e) {
+		if (e.keyCode == 13 && e.ctrlKey) {
+			$('#button-submit-custom_test').click();
+		}
+	});
+	$('#form-custom_test').submit(function(e) {
+		var ok = true;
+		var post_data = {};
+		if (post_data != {}) {
+			post_data['check-custom_test'] = "";
+			$.ajax({
+				url : '/problem/1208',
+				type : 'POST',
+				dataType : 'json',
+				async : false,
+
+				data : post_data,
+				success : function(data) {
+					if (data.extra != undefined) {
+						alert(data.extra);
+						ok = false;
+					}
+				}
+			});
+		}
+		$(this).find("input[type='file']").each(function() {
+			for (var i = 0; i < this.files.length; i++) {
+				if (this.files[i].size > 10 * 1024 * 1024) {
+					$('#div-' + $(this).attr('name')).addClass('has-error');
+					$('#help-' + $(this).attr('name')).text('文件大小不能超过10M');
+					ok = false;
+				} else {
+					$('#div-' + $(this).attr('name')).removeClass('has-error');
+					$('#help-' + $(this).attr('name')).text('');
+				}
+			}
+		});
+		e.preventDefault();
+		if (ok) {
+			$(this).ajaxSubmit({
+				beforeSubmit: function(formData) {
+					formData.push({name: 'submit-custom_test', value: 'custom_test', type: 'submit'});
+				},
+				success : function(response_text) {custom_test_onsubmit(response_text, $('#div-custom_test_result')[0], '/problem/1208?get=custom-test-status-details')}
+			});
+		}
+	});
+});
+</script>	</div>
+	</div>
+			</div>
+						<div class="uoj-footer">
+				<p>
+					<a href="https://darkbzoj.tk/problem/1208?locale=zh-cn"><img src="//img.uoj.ac/utility/flags/24/cn.png" alt="中文" /></a> 
+					<a href="https://darkbzoj.tk/problem/1208?locale=en"><img src="//img.uoj.ac/utility/flags/24/gb.png" alt="English" /></a>
+				</p>
+				
+				<ul class="list-inline">
+					<li>黑暗爆炸OJ</li>
+									</ul>
+				
+				<p>Server time: 2020-06-17 10:10:37 | <a href="https://github.com/UniversalOJ/UOJ-System">开源项目</a></p>
+			</div>
+					</div>
+		<!-- /container -->
+	</body>
+</html>
